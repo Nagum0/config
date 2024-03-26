@@ -15,7 +15,7 @@
 -- ColorMyPencils()
 
 require("gruvbox").setup({
-    transparent_mode = false
+    transparent_mode = true
 })
 
 vim.cmd.colorschem("gruvbox")
