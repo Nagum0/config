@@ -41,4 +41,16 @@ require("lazy").setup({
     { 
         "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...
     },
+
+    -- Treesitter:
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = ":TSUpdate"
+    },
+
+    -- Telescope:
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.6',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
 })
