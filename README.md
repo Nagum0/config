@@ -1,4 +1,8 @@
-# NVIM CONFIG
+# MY CONFIG FILES
+
+This repo has all my config file.
+
+## NVIM CONFIG
 
 - settings.json: The terminal settings for Windows Terminal
 - wallpaper.png: My current Windows Terminal background image
