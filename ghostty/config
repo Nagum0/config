@@ -1,0 +1,4 @@
+font-family = "FiraCode Nerd Font"
+# theme = "catppuccin-mocha"
+theme = "tokyonight_night"
+background-opacity = "0.9"

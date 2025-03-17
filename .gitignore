@@ -1,0 +1,9 @@
+*
+
+!.gitignore
+!README.md
+!.tmux.conf
+!nvim/
+!nvim/**
+!ghostty/
+!ghostty/**
