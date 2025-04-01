@@ -20,6 +20,7 @@
   "nightfox.nvim": { "branch": "main", "commit": "7557f26defd093c4e9bc17f28b08403f706f5a44" },
   "nordic.nvim": { "branch": "main", "commit": "1ee4044077059b34eacd18d93613495a602c131f" },
   "nvim-cmp": { "branch": "main", "commit": "ca4d3330d386e76967e53b85953c170658255ecb" },
+  "nvim-jdtls": { "branch": "master", "commit": "2f7bff9b8d2ee1918b36ca55f19547d9d335a268" },
   "nvim-lspconfig": { "branch": "master", "commit": "90c1c6cc822b1836209514c096069b9bbeab63d9" },
   "nvim-tree.lua": { "branch": "master", "commit": "c7639482a1598f4756798df1b2d72f79fe5bb34f" },
   "nvim-treesitter": { "branch": "master", "commit": "70d44dad700512460aa76e9299ed00e0f53f3164" },
