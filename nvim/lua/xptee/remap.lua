@@ -36,3 +36,9 @@ vim.keymap.set("v", ";", "l", opts)
 -- BUFFERLINE KEYMAPS
 vim.keymap.set("n", "<leader>bl", ":BufferLinePick<CR>", opts)
 vim.keymap.set("n", "<leader>cl", ":BufferLinePickClose<CR>", opts)
+
+-- ESCAPE REBIND
+-- run command: setxkbmap -option caps:escape for this to work
+vim.api.nvim_set_keymap("i", "<CapsLock>", "<Esc>", opts)
+vim.api.nvim_set_keymap("n", "<CapsLock>", "<Esc>", opts)
+vim.api.nvim_set_keymap("v", "<CapsLock>", "<Esc>", opts)
