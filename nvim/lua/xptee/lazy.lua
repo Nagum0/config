@@ -3,17 +3,17 @@ local vim = vim
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-	if vim.v.shell_error ~= 0 then
-		vim.api.nvim_echo({
-			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-			{ out, "WarningMsg" },
-			{ "\nPress any key to exit..." },
-		}, true, {})
-		vim.fn.getchar()
-		os.exit(1)
-	end
+    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    if vim.v.shell_error ~= 0 then
+        vim.api.nvim_echo({
+            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+            { out, "WarningMsg" },
+            { "\nPress any key to exit..." },
+        }, true, {})
+        vim.fn.getchar()
+        os.exit(1)
+    end
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -21,8 +21,8 @@ vim.opt.rtp:prepend(lazypath)
 -- Why? Because it's simple and I like simple stuff.
 
 require("lazy").setup({
-	-- ---------- THEMES ----------
-	"blazkowolf/gruber-darker.nvim",
+    -- ---------- THEMES ----------
+    "blazkowolf/gruber-darker.nvim",
     "ellisonleao/gruvbox.nvim",
     {
         "Mofiqul/vscode.nvim",
@@ -131,32 +131,32 @@ require("lazy").setup({
         end,
     },
 
-	-- TELESCOPE
-	{
-		'nvim-telescope/telescope.nvim', tag = '0.1.8',
-		dependencies = { 'nvim-lua/plenary.nvim' },
-		-- Telescope bindings
-		config = function()
-			local builtin = require('telescope.builtin')
-			vim.keymap.set("n", "<leader>ff", builtin.find_files)
-			vim.keymap.set('n', '<leader>fg', builtin.live_grep)
-		end,
-	},
+    -- TELESCOPE
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        -- Telescope bindings
+        config = function()
+            local builtin = require('telescope.builtin')
+            vim.keymap.set("n", "<leader>ff", builtin.find_files)
+            vim.keymap.set('n', '<leader>fg', builtin.live_grep)
+        end,
+    },
 
-	-- TREESITTER
-	{
-		'nvim-treesitter/nvim-treesitter',
-		build = ":TSUpdate",
-		config = function()
-			local configs = require("nvim-treesitter.configs")
-			configs.setup({
-				ensure_installed = { "c", "lua", "rust", "go" },
+    -- TREESITTER
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = ":TSUpdate",
+        config = function()
+            local configs = require("nvim-treesitter.configs")
+            configs.setup({
+                ensure_installed = { "c", "lua", "rust", "go" },
                 highlight = {
                     enable = true,
                 },
-			})
-		end,
-	},
+            })
+        end,
+    },
 
     -- LUALINE
     {
@@ -249,6 +249,17 @@ require("lazy").setup({
             local mason_lspconfig = require("mason-lspconfig")
             local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
+            vim.diagnostic.config({
+                virtual_text = {
+                    prefix = "●",
+                    spacing = 4,
+                },
+                signs = true,
+                underline = true,
+                update_in_insert = false,
+                severity_sort = true,
+            })
+
             vim.api.nvim_create_autocmd("LspAttach", {
                 callback = function(ev)
                     local opts = { buffer = ev.buf, silent = true }
@@ -294,63 +305,63 @@ require("lazy").setup({
             end,
         },
 
-    -- NVIM-JDTLS
-    {
-        "mfussenegger/nvim-jdtls",
-        config = function ()
-            local config = {
-                cmd = {'/home/zack/.local/share/nvim/mason/packages/jdtls/bin/jdtls'},
-                root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
-            }
-            require('jdtls').start_or_attach(config)
-        end
-    },
-
-    -- COMMENTS
-    {
-        'numToStr/Comment.nvim',
-        opts = {
-            -- add any options here
-        }
-    },
-
-    -- NVIMTREE
-    {
-        "nvim-tree/nvim-tree.lua",
-        version = "*",
-        lazy = false,
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
+        -- NVIM-JDTLS
+        {
+            "mfussenegger/nvim-jdtls",
+            config = function ()
+                local config = {
+                    cmd = {'/home/zack/.local/share/nvim/mason/packages/jdtls/bin/jdtls'},
+                    root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+                }
+                require('jdtls').start_or_attach(config)
+            end
         },
-        config = function()
-            require("nvim-tree").setup {
-                view = {
-                    side = "right",
-                },
-                filters = {
-                    git_ignored = false,
-                },
-            }
-        end,
-    },
 
-    -- BUFFERLINE
-    {
-        'akinsho/bufferline.nvim',
-        version = "*",
-        dependencies = 'nvim-tree/nvim-web-devicons',
-        config = function()
-            require("bufferline").setup({
-                options = {
-                    mode = "buffers",
-                    offsets = {
-                        filetype = "NvimTree",
-                        text = "File Explorer",
-                        highlight = "Directory",
-                        separator = true,
+        -- COMMENTS
+        {
+            'numToStr/Comment.nvim',
+            opts = {
+                -- add any options here
+            }
+        },
+
+        -- NVIMTREE
+        {
+            "nvim-tree/nvim-tree.lua",
+            version = "*",
+            lazy = false,
+            dependencies = {
+                "nvim-tree/nvim-web-devicons",
+            },
+            config = function()
+                require("nvim-tree").setup {
+                    view = {
+                        side = "right",
                     },
-                },
-            })
-        end,
-    },
-})
+                    filters = {
+                        git_ignored = false,
+                    },
+                }
+            end,
+        },
+
+        -- BUFFERLINE
+        {
+            'akinsho/bufferline.nvim',
+            version = "*",
+            dependencies = 'nvim-tree/nvim-web-devicons',
+            config = function()
+                require("bufferline").setup({
+                    options = {
+                        mode = "buffers",
+                        offsets = {
+                            filetype = "NvimTree",
+                            text = "File Explorer",
+                            highlight = "Directory",
+                            separator = true,
+                        },
+                    },
+                })
+            end,
+        },
+    })
