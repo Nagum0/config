@@ -1,0 +1,111 @@
+{
+  "editor.lineNumbers": "relative",
+  "vim.leader": "<Space>",
+  "editor.fontWeight": "normal",
+  "editor.fontFamily": "Cascadia Code",
+  "background.windowBackgrounds": [],
+  "background.backgroundOpacity": [1, 1, 1, 1],
+  "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\g++.exe",
+  "workbench.iconTheme": "material-icon-theme",
+  "makefile.additionalCompilerNames": ["g++"],
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+  "dart.enableSdkFormatter": false,
+  "workbench.startupEditor": "none",
+  "editor.rulers": [],
+  "explorer.confirmDelete": false,
+  "php.validate.executablePath": "C:/xampp/php/php.exe",
+  "editor.indentSize": "tabSize",
+  "editor.fontVariations": false,
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "markdown-preview-enhanced.previewTheme": "one-light.css",
+  "git.openRepositoryInParentFolders": "never",
+  "haskell.manageHLS": "GHCup",
+  "workbench.settings.applyToAllProfiles": [],
+  "background.backgroundChangeTime": [100, 0, 0, 0],
+  "background.backgroundAlignment": [
+    "Center Center",
+    "Center Center",
+    "Center Center",
+    "Center Center"
+  ],
+  "editor.fontLigatures": true,
+  "background.backgroundBlur": ["0", "0", "0", "0"],
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "editor.detectIndentation": false,
+  "editor.mouseWheelZoom": true,
+  "workbench.sideBar.location": "right",
+  "background.backgroundSize": ["Contain", "Cover", "Cover", "Cover"],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.compactFolders": false,
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "background.sidebarBackgrounds": [],
+  "background.panelBackgrounds": [
+    "c:/Users/xptee/Pictures/Wallpapers/VsCode/rei5.jpg"
+  ],
+  "editor.minimap.enabled": false,
+  "redhat.telemetry.enabled": true,
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "editor.insertSpaces": false,
+  "javascript.format.insertSpaceAfterCommaDelimiter": false,
+  "glassit.alpha": 255,
+  "background.useInvertedOpacity": true,
+  "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.fontWeight": "normal",
+  "wallpaper-setting.wallpaper.filePath": "c:\\Users\\xptee\\Pictures\\Wallpapers\\Cool\\1316373.jpeg",
+  "hexeditor.columnWidth": 17,
+  "hexeditor.showDecodedText": true,
+  "hexeditor.defaultEndianness": "little",
+  "hexeditor.inspectorType": "aside",
+  "background.editorBackgrounds": [
+    "c:/Users/xptee/Pictures/Wallpapers/Wallpapers/astolfo5.png"
+  ],
+  "background.backgroundSizeValue": ["100%", "100", "100%", "100%"],
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off"
+  },
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<C-q>"],
+      "after": ["<C-u>"]
+    },
+    {
+      "before": ["<C-s>"],
+      "after": ["<C-d>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "p", "v"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    { "before": ["o"], "after": ["k"] },
+    { "before": ["l"], "after": ["j"] },
+    { "before": ["k"], "after": ["h"] },
+    { "before": [";"], "after": ["l"] },
+	{
+    	"before": ["<leader>", "f", "f"],
+    	"commands": ["workbench.action.quickOpen"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+	{ "before": ["o"], "after": ["k"] },
+    { "before": ["l"], "after": ["j"] },
+    { "before": ["k"], "after": ["h"] },
+    { "before": [";"], "after": ["l"] },
+  ]
+}
