@@ -1,3 +1,4 @@
 font-family = "FiraCode Nerd Font Med"
-theme = "tokyonight"
+font-size = 13
+theme = "Chalkboard"
 background-opacity = "0.95"
