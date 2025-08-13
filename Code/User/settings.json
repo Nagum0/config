@@ -1,0 +1,127 @@
+{
+    "sqldeveloper.sqlHistory.historyLimit": 500,
+    "workbench.sideBar.location": "right",
+    "editor.lineNumbers": "relative",
+    "vim.leader": "<Space>",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<C-q>"
+            ],
+            "after": [
+                "<C-u>"
+            ]
+        },
+        {
+            "before": [
+                "<C-s>"
+            ],
+            "after": [
+                "<C-d>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "p",
+                "v"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        },
+        {
+            "before": [
+                "o"
+            ],
+            "after": [
+                "k"
+            ]
+        },
+        {
+            "before": [
+                "l"
+            ],
+            "after": [
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "k"
+            ],
+            "after": [
+                "h"
+            ]
+        },
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                "l"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "o"
+            ],
+            "after": [
+                "k"
+            ]
+        },
+        {
+            "before": [
+                "l"
+            ],
+            "after": [
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "k"
+            ],
+            "after": [
+                "h"
+            ]
+        },
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                "l"
+            ]
+        },
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontSize": 17,
+    "editor.fontFamily": "Cascadia Code",
+    "editor.fontLigatures": true,
+    "background.enabled": true,
+    "background.editorBackgrounds": [],
+    "workbench.colorTheme": "Default Dark+",
+    "editor.minimap.enabled": false,
+    "explorer.compactFolders": false,
+    "redhat.telemetry.enabled": true,
+    "git.openRepositoryInParentFolders": "always",
+    "workbench.settings.applyToAllProfiles": [
+        
+    ],
+    "go.toolsManagement.autoUpdate": true,
+}

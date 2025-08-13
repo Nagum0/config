@@ -1,0 +1,7 @@
+[
+    {
+        "key": "shift+K",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }
+]

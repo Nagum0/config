@@ -7,5 +7,7 @@
 !nvim/**
 !ghostty/
 !ghostty/**
+!Code/
+!Code/User/
 !Code/User/settings.json
 !Code/User/keybindings.json
