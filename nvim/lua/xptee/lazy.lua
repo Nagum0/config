@@ -274,7 +274,9 @@ require("lazy").setup({
 
                     -- Go to implementation
                     opts.desc = "Go to implementation"
-                    vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, opts);
+                    vim.keymap.set("n", "<leader>gi", function()
+                        vim.lsp.buf.definition()
+                    end, opts);
                 end,
             })
 
@@ -288,34 +290,9 @@ require("lazy").setup({
                         capabilities = capabilities,
                     })
                 end,
-                ["pylsp"] = function ()
-                    local pylsp = require("lspconfig")["pylsp"]
-                    pylsp.setup({
-                        settings = {
-                            pylsp = {
-                                plugins = {
-                                    pycodestyle = {
-                                        ignore = { "W291", "W293", "E302", "E305", "E501", "W191" }
-                                    }
-                                }
-                            }
-                        }
-                    })                end,
-                })
-            end,
-        },
-
-        -- NVIM-JDTLS
-        {
-            "mfussenegger/nvim-jdtls",
-            config = function ()
-                local config = {
-                    cmd = {'/home/zack/.local/share/nvim/mason/packages/jdtls/bin/jdtls'},
-                    root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
-                }
-                require('jdtls').start_or_attach(config)
-            end
-        },
+            })
+        end,
+    },
 
         -- COMMENTS
         {
