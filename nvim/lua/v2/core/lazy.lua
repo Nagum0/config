@@ -16,11 +16,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- lazy.nvim setup
--- require("lazy").setup(require("zack.pkgs.plugins"))
 require("lazy").setup({
     spec = {
         {
-            import = "zack.plugins"
+            import = "v2.plugins"
         },
     },
 })
