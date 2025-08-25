@@ -1,1 +1,1 @@
-require("v2")
+require("v3-demo")
